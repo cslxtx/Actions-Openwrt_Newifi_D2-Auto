@@ -17,11 +17,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ''
-#  schedule:
+#    paths:
+#      - ''
+  schedule:
     - cron: 0 6 * * 5
-#  watch:
+  watch:
     types: started
 
 env:
