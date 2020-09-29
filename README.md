@@ -1,28 +1,35 @@
-# Actions-OpenWrt
+# Actions-OpenWrt-Auto
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
+使用 GitHub Actions 云编译Openwrt固件
 
-Build OpenWrt using GitHub Actions
+感谢[P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)提供的GitHub Actions云编译代码
 
 [Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
-## Usage
+### 默认编译
 
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository, and the build starts automatically.Progress can be viewed on the Actions page.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
+- Newifi-D2固件，SSRPlus+、Passwall、SmartDNS、PPTP服务端、京东签到服务、AdGuardHome、Uhttpd、Socat
+- 用户名：root 密码：password 管理IP：192.168.99.1
+- 这个固件我自用的，自动每周五编译。
+- 如已有`.config`文件自动编译，请单击[使用此模板](https://github.com/cslxtx/Actions-openwrt-newifi_D2/generate)，上传`.config`开始编译。
+- 如需开启SSH的选择插件自定义编译，请单击[使用此模板](https://github.com/cslxtx/Actions-Openwrt_Newifi_D2/generate)
 
-### Tips
+## 使用方法
 
-It may take a long time to create a `.config` file and build the OpenWrt firmware. Thus, before create repository to build your own firmware, you may check out if others have already built it which meet your needs by simply [search `Actions-Openwrt` in GitHub](https://github.com/search?q=Actions-openwrt).
+- 单击[使用此模板](https://github.com/cslxtx/Actions-Openwrt_Newifi_D2-Auto/generate)按钮创建一个新的存储库。
+- 自动周五编译，进度可以在Actions页面上查看。
+- 编译完成后，点击Actions页面右上角的`Artifacts`按钮以下载固件压缩包文件。
 
-Add some meta info of your built firmware (such as firmware architecture and installed packages) to your repository introduction, this will save others' time.
+### 提示
 
-## Acknowledgments
+创建一个`.config`文件并编译OpenWrt固件可能需要很长时间。因此，在创建存储库来编译自己的固件之前，您可以通过简单的[在Github里搜索 `Actions-Openwrt`](https://github.com/search?q=Actions-openwrt)。来查询其他人是否已经编译了满足您需求的存储库。
 
+在你的存储库介绍中添加一些你构建的固件的元信息（比如固件体系结构和安装的软件包），这样可以节省其他人的时间。
+
+## 致谢
+- [P3TERX/Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt)
+- [tty228微信推送](https://github.com/tty228/luci-app-serverchan)
+- [kenzok8](https://github.com/kenzok8)
 - [Microsoft](https://www.microsoft.com)
 - [Microsoft Azure](https://azure.microsoft.com)
 - [GitHub](https://github.com)
@@ -32,11 +39,7 @@ Add some meta info of your built firmware (such as firmware architecture and ins
 - [csexton/debugger-action](https://github.com/csexton/debugger-action)
 - [Cisco](https://www.cisco.com/)
 - [OpenWrt](https://github.com/openwrt/openwrt)
-- [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
+- [Lienol OpenWrt](https://github.com/Lienol/openwrt)
 - [Cowtransfer](https://cowtransfer.com)
 - [WeTransfer](https://wetransfer.com/)
 - [Mikubill/transfer](https://github.com/Mikubill/transfer)
-
-## License
-
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE) © P3TERX
